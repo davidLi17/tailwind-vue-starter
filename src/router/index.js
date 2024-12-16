@@ -1,90 +1,85 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Events from "../views/Events.vue";
-import Accordion from "../views/Accordion.vue";
-import Carousel from "../views/Carousel.vue";
-import Collapse from "../views/Collapse.vue";
-import Dial from "../views/Dial.vue";
-import Dismiss from "../views/Dismiss.vue";
-import Drawer from "../views/Drawer.vue";
-import Dropdown from "../views/Dropdown.vue";
-import Popover from "../views/Popover.vue";
-import Tabs from "../views/Tabs.vue";
-import Tooltip from "../views/Tooltip.vue";
-import Modal from "../views/Modal.vue";
-import InputCounter from "../views/InputCounter.vue";
-import Datepicker from "../views/Datepicker.vue";
 
 const routes = [
   {
+    path: "/",
+    redirect: "/subtitle",
+  },
+  {
     path: "/events",
     name: "Events",
-    component: Events,
+    component: () => import("../views/Events.vue"),
   },
   {
     path: "/accordion",
     name: "Accordion",
-    component: Accordion,
+    component: () => import("../views/Accordion.vue"),
   },
   {
     path: "/carousel",
     name: "Carousel",
-    component: Carousel,
+    component: () => import("../views/Carousel.vue"),
   },
   {
     path: "/collapse",
     name: "Collapse",
-    component: Collapse,
+    component: () => import("../views/Collapse.vue"),
   },
   {
     path: "/dial",
     name: "Dial",
-    component: Dial,
+    component: () => import("../views/Dial.vue"),
   },
   {
     path: "/dismiss",
     name: "Dismiss",
-    component: Dismiss,
+    component: () => import("../views/Dismiss.vue"),
   },
   {
     path: "/drawer",
     name: "Drawer",
-    component: Drawer,
+    component: () => import("../views/Drawer.vue"),
   },
   {
     path: "/dropdown",
     name: "Dropdown",
-    component: Dropdown,
+    component: () => import("../views/Dropdown.vue"),
   },
   {
     path: "/popover",
     name: "Popover",
-    component: Popover,
+    component: () => import("../views/Popover.vue"),
   },
   {
     path: "/tabs",
     name: "Tabs",
-    component: Tabs,
+    component: () => import("../views/Tabs.vue"),
   },
   {
     path: "/tooltip",
     name: "Tooltip",
-    component: Tooltip,
+    component: () => import("../views/Tooltip.vue"),
   },
   {
     path: "/modal",
     name: "Modal",
-    component: Modal,
+    component: () => import("../views/Modal.vue"),
   },
   {
     path: "/input-counter",
     name: "InputCounter",
-    component: InputCounter,
+    component: () => import("../views/InputCounter.vue"),
   },
   {
     path: "/datepicker",
     name: "Datepicker",
-    component: Datepicker,
+    component: () => import("../views/Datepicker.vue"),
   },
+  {
+    path: "/subtitle",
+    name: "Subtitle",
+    component: () => import("../views/Subtitle.vue"),
+  }
 ];
 
 const router = createRouter({
